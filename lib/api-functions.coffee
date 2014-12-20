@@ -202,6 +202,10 @@ addAliases = (device, aliases) ->
         if not obj[i]?
           obj = null
           break
+        if obj[i] == ""
+          obj = null
+          break
+          
         obj = obj[i]
 
       device[k] = obj if obj?
