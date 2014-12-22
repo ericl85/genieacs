@@ -205,7 +205,7 @@ addAliases = (device, aliases) ->
         obj = obj[i]
   
       if device[k]?
-        device[k] = obj if obj? and (obj._value != "" or obj._value != 0)
+        device[k] = obj if obj? and (obj._value != "" and obj._value != 0)
       else
         device[k] = obj if obj? and obj._value != ""
 
