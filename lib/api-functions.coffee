@@ -201,14 +201,10 @@ addAliases = (device, aliases) ->
       for i in pp
         if not obj[i]?
           obj = null
-          break
-        if obj[i] == ""
-          obj = null
-          break
-          
+          break  
         obj = obj[i]
-
-      device[k] = obj if obj?
+      
+      device[k] = obj if obj? and obj._value != ""
 
 
 insertTasks = (tasks, aliases, callback) ->
