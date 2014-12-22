@@ -207,7 +207,7 @@ addAliases = (device, aliases) ->
       if device[k]?
         device[k] = obj if obj? and (obj._value != "" and obj._value != 0)
       else
-        device[k] = obj if obj? and obj._value != ""
+        device[k] = obj if obj?
 
 
 insertTasks = (tasks, aliases, callback) ->
